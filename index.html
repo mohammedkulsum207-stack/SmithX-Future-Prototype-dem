@@ -2,20 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>SMITHX — The Future of Commerce</title>
-
-  <meta
-    name="description"
-    content="SmithX — a next-generation commerce experience powered by AI."
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#030305">
+  <meta name="description" content="SMITHX — Future Commerce powered by AI.">
+  <title>SMITHX — Future Commerce</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
     rel="stylesheet"
   >
 
@@ -25,15 +21,14 @@
 <body>
 
   <!-- BACKGROUND -->
-  <div class="background">
+  <div class="background" aria-hidden="true">
     <div class="glow glow-one"></div>
     <div class="glow glow-two"></div>
     <div class="grid"></div>
     <div id="particles"></div>
   </div>
 
-
-  <!-- NAVIGATION -->
+  <!-- NAV -->
   <header class="navbar">
 
     <a href="#" class="logo">
@@ -45,157 +40,239 @@
       FUTURE COMMERCE
     </div>
 
-    <button class="bag-button" id="bagButton">
-      <span>Bag</span>
-      <strong id="cartCount">0</strong>
-    </button>
+    <div class="nav-actions">
+
+      <button
+        class="explore-button"
+        id="exploreButton"
+      >
+        Explore
+      </button>
+
+      <button
+        class="bag-button"
+        id="bagButton"
+        aria-label="Open shopping bag"
+      >
+        Bag
+        <strong id="cartCount">0</strong>
+      </button>
+
+    </div>
 
   </header>
 
 
-  <!-- MAIN EXPERIENCE -->
+  <!-- HERO -->
   <main class="experience">
 
-    <!-- PRODUCT COUNTER -->
     <div class="product-counter">
-      <span id="currentProduct">01</span>
+      <span id="counterCurrent">01</span>
       <span>/</span>
-      <span id="totalProducts">05</span>
+      <span id="counterTotal">05</span>
     </div>
 
 
-    <!-- LEFT NAVIGATION -->
     <button
       class="navigation previous"
       id="previousButton"
       aria-label="Previous product"
     >
-      ←
+      ‹
     </button>
 
 
-    <!-- PRODUCT AREA -->
     <section
       class="product-stage"
       id="productStage"
     >
 
-      <div class="product-halo"></div>
+      <div
+        class="product-halo"
+        id="productHalo"
+      ></div>
 
-      <div class="product-light"></div>
+      <div
+        class="product-light"
+        id="productLight"
+      ></div>
 
       <div class="product-shadow"></div>
 
-      <img
-        id="productImage"
+      <div
         class="product-image"
-        src=""
-        alt=""
+        id="productImage"
+      ></div>
+
+      <button
+        class="next-product"
+        id="nextProduct"
+        aria-label="Preview next product"
       >
-
-      <!-- NEXT PRODUCT -->
-      <div class="next-product">
-
-        <span class="next-label">
-          NEXT
-        </span>
-
-        <span id="nextProductName">
-          Product
-        </span>
-
-      </div>
+        <span>NEXT</span>
+        <span id="nextProductName"></span>
+      </button>
 
     </section>
 
 
-    <!-- RIGHT NAVIGATION -->
     <button
       class="navigation next"
       id="nextButton"
       aria-label="Next product"
     >
-      →
+      ›
     </button>
 
 
-    <!-- PRODUCT INFORMATION -->
+    <!-- PRODUCT INFO -->
     <section
       class="product-information"
       id="productInformation"
     >
 
-      <div class="product-category" id="productCategory">
-        TECHNOLOGY
-      </div>
+      <p
+        class="product-category"
+        id="productCategory"
+      ></p>
 
-      <h1 id="productName">
-        Product Name
-      </h1>
+      <h1 id="productName"></h1>
 
-      <div class="product-price" id="productPrice">
-        KES 0
-      </div>
+      <div
+        class="product-price"
+        id="productPrice"
+      ></div>
 
       <p
         class="product-description"
         id="productDescription"
-      >
-        Discover something new.
-      </p>
+      ></p>
 
+      <div class="hero-actions">
 
-      <!-- AI ASSISTANT -->
-      <button
-        class="ai-button"
-        id="aiButton"
-      >
-        <span class="ai-icon">✦</span>
-
-        <span>
+        <button
+          class="ai-button"
+          id="aiButton"
+        >
+          <span class="ai-icon">✦</span>
           Ask SmithX AI
-        </span>
-      </button>
+        </button>
 
+        <button
+          class="add-button"
+          id="addButton"
+        >
+          <span>ADD TO BAG</span>
+          <span class="add-arrow">→</span>
+        </button>
 
-      <!-- ADD TO BAG -->
-      <button
-        class="add-button"
-        id="addButton"
-      >
-
-        <span>
-          ADD TO BAG
-        </span>
-
-        <span class="add-arrow">
-          →
-        </span>
-
-      </button>
+      </div>
 
     </section>
 
 
-    <!-- PRODUCT DOTS -->
     <div
       class="product-dots"
       id="productDots"
     ></div>
 
+
+    <button
+      class="scroll-hint"
+      id="exploreHint"
+    >
+      EXPLORE COLLECTION
+      <span>↓</span>
+    </button>
+
   </main>
+
+
+  <!-- MARKETPLACE -->
+  <section
+    class="marketplace"
+    id="marketplace"
+  >
+
+    <div class="marketplace-header">
+
+      <div>
+
+        <span class="eyebrow">
+          SMITHX MARKETPLACE
+        </span>
+
+        <h2>
+          Discover what comes next.
+        </h2>
+
+        <p>
+          Search products, explore categories,
+          and let SmithX AI help you choose.
+        </p>
+
+      </div>
+
+      <button
+        class="close-market"
+        id="closeMarketplace"
+        aria-label="Back to hero"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <div class="market-tools">
+
+      <label class="search-box">
+
+        <span>⌕</span>
+
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search anything..."
+          autocomplete="off"
+        >
+
+      </label>
+
+      <div
+        class="categories"
+        id="categories"
+      ></div>
+
+    </div>
+
+
+    <div
+      class="product-grid"
+      id="productGrid"
+    ></div>
+
+  </section>
+
+
+  <!-- OVERLAY -->
+  <div
+    class="overlay"
+    id="overlay"
+  ></div>
 
 
   <!-- AI PANEL -->
   <aside
-    class="ai-panel"
+    class="side-panel ai-panel"
     id="aiPanel"
+    aria-hidden="true"
   >
 
     <button
-      class="close-ai"
+      class="close-panel"
       id="closeAI"
-      aria-label="Close AI assistant"
+      aria-label="Close AI"
     >
       ×
     </button>
@@ -207,33 +284,31 @@
       </span>
 
       <div>
-        <small>SMITHX</small>
-        <h2>AI Assistant</h2>
+
+        <small>
+          SMITHX AI
+        </small>
+
+        <h2>
+          Shopping Concierge
+        </h2>
+
       </div>
 
     </div>
 
-    <p class="ai-message">
-      I can help you understand this product,
-      compare it with alternatives, or find
-      something similar.
-    </p>
 
-    <div class="ai-suggestions">
+    <p
+      class="ai-message"
+      id="aiMessage"
+    ></p>
 
-      <button data-question="Tell me about this product">
-        Tell me about it
-      </button>
 
-      <button data-question="Is this worth the price?">
-        Is it worth the price?
-      </button>
+    <div
+      class="ai-suggestions"
+      id="aiSuggestions"
+    ></div>
 
-      <button data-question="Find something cheaper">
-        Find something cheaper
-      </button>
-
-    </div>
 
     <div
       class="ai-response"
@@ -243,41 +318,57 @@
   </aside>
 
 
-  <!-- CART PANEL -->
+  <!-- CART -->
   <aside
-    class="cart-panel"
+    class="side-panel cart-panel"
     id="cartPanel"
+    aria-hidden="true"
   >
 
     <button
-      class="close-cart"
+      class="close-panel"
       id="closeCart"
-      aria-label="Close bag"
+      aria-label="Close shopping bag"
     >
       ×
     </button>
 
+
     <div class="cart-heading">
-      <span>YOUR BAG</span>
-      <strong id="cartItemsCount">0 ITEMS</strong>
+
+      <span>
+        YOUR BAG
+      </span>
+
+      <strong
+        id="cartItemsCount"
+      >
+        0 ITEMS
+      </strong>
+
     </div>
+
 
     <div
       class="cart-items"
       id="cartItems"
-    >
-      <div class="empty-cart">
-        Your bag is empty.
-      </div>
-    </div>
+    ></div>
 
-    <div class="cart-bottom">
+
+    <div
+      class="cart-bottom"
+      id="cartBottom"
+    >
 
       <div class="cart-total">
 
-        <span>Total</span>
+        <span>
+          Total
+        </span>
 
-        <strong id="cartTotal">
+        <strong
+          id="cartTotal"
+        >
           KES 0
         </strong>
 
@@ -287,7 +378,7 @@
         class="checkout-button"
         id="checkoutButton"
       >
-        DEMO CHECKOUT →
+        CONTINUE TO CHECKOUT →
       </button>
 
     </div>
@@ -295,23 +386,68 @@
   </aside>
 
 
-  <!-- OVERLAY -->
+  <!-- CHECKOUT -->
   <div
-    class="overlay"
-    id="overlay"
-  ></div>
+    class="checkout-modal"
+    id="checkoutModal"
+    aria-hidden="true"
+  >
+
+    <div class="checkout-card">
+
+      <button
+        class="close-checkout"
+        id="closeCheckout"
+      >
+        ×
+      </button>
+
+      <span class="eyebrow">
+        DEMO CHECKOUT
+      </span>
+
+      <h2>
+        Your order is ready.
+      </h2>
+
+      <p>
+        This prototype prepares your order but does not
+        process real payments yet.
+      </p>
+
+      <div class="checkout-summary">
+
+        <span>
+          Total
+        </span>
+
+        <strong
+          id="checkoutTotal"
+        >
+          KES 0
+        </strong>
+
+      </div>
+
+      <button
+        class="checkout-done"
+        id="finishCheckout"
+      >
+        FINISH DEMO →
+      </button>
+
+    </div>
+
+  </div>
 
 
   <!-- TOAST -->
   <div
     class="toast"
     id="toast"
-  >
-    Added to your bag
-  </div>
+  ></div>
 
 
-  <!-- JAVASCRIPT -->
   <script src="script.js"></script>
 
 </body>
