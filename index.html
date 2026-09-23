@@ -1,1 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>SMITHX — The Future of Commerce</title>
+
+  <meta
+    name="description"
+    content="SmithX — a next-generation commerce experience powered by AI."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- BACKGROUND -->
+  <div class="background">
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+    <div class="grid"></div>
+    <div id="particles"></div>
+  </div>
+
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+
+    <a href="#" class="logo">
+      SMITH<span>X</span>
+    </a>
+
+    <div class="nav-status">
+      <span class="status-dot"></span>
+      FUTURE COMMERCE
+    </div>
+
+    <button class="bag-button" id="bagButton">
+      <span>Bag</span>
+      <strong id="cartCount">0</strong>
+    </button>
+
+  </header>
+
+
+  <!-- MAIN EXPERIENCE -->
+  <main class="experience">
+
+    <!-- PRODUCT COUNTER -->
+    <div class="product-counter">
+      <span id="currentProduct">01</span>
+      <span>/</span>
+      <span id="totalProducts">05</span>
+    </div>
+
+
+    <!-- LEFT NAVIGATION -->
+    <button
+      class="navigation previous"
+      id="previousButton"
+      aria-label="Previous product"
+    >
+      ←
+    </button>
+
+
+    <!-- PRODUCT AREA -->
+    <section
+      class="product-stage"
+      id="productStage"
+    >
+
+      <div class="product-halo"></div>
+
+      <div class="product-light"></div>
+
+      <div class="product-shadow"></div>
+
+      <img
+        id="productImage"
+        class="product-image"
+        src=""
+        alt=""
+      >
+
+      <!-- NEXT PRODUCT -->
+      <div class="next-product">
+
+        <span class="next-label">
+          NEXT
+        </span>
+
+        <span id="nextProductName">
+          Product
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- RIGHT NAVIGATION -->
+    <button
+      class="navigation next"
+      id="nextButton"
+      aria-label="Next product"
+    >
+      →
+    </button>
+
+
+    <!-- PRODUCT INFORMATION -->
+    <section
+      class="product-information"
+      id="productInformation"
+    >
+
+      <div class="product-category" id="productCategory">
+        TECHNOLOGY
+      </div>
+
+      <h1 id="productName">
+        Product Name
+      </h1>
+
+      <div class="product-price" id="productPrice">
+        KES 0
+      </div>
+
+      <p
+        class="product-description"
+        id="productDescription"
+      >
+        Discover something new.
+      </p>
+
+
+      <!-- AI ASSISTANT -->
+      <button
+        class="ai-button"
+        id="aiButton"
+      >
+        <span class="ai-icon">✦</span>
+
+        <span>
+          Ask SmithX AI
+        </span>
+      </button>
+
+
+      <!-- ADD TO BAG -->
+      <button
+        class="add-button"
+        id="addButton"
+      >
+
+        <span>
+          ADD TO BAG
+        </span>
+
+        <span class="add-arrow">
+          →
+        </span>
+
+      </button>
+
+    </section>
+
+
+    <!-- PRODUCT DOTS -->
+    <div
+      class="product-dots"
+      id="productDots"
+    ></div>
+
+  </main>
+
+
+  <!-- AI PANEL -->
+  <aside
+    class="ai-panel"
+    id="aiPanel"
+  >
+
+    <button
+      class="close-ai"
+      id="closeAI"
+      aria-label="Close AI assistant"
+    >
+      ×
+    </button>
+
+    <div class="ai-heading">
+
+      <span class="ai-symbol">
+        ✦
+      </span>
+
+      <div>
+        <small>SMITHX</small>
+        <h2>AI Assistant</h2>
+      </div>
+
+    </div>
+
+    <p class="ai-message">
+      I can help you understand this product,
+      compare it with alternatives, or find
+      something similar.
+    </p>
+
+    <div class="ai-suggestions">
+
+      <button data-question="Tell me about this product">
+        Tell me about it
+      </button>
+
+      <button data-question="Is this worth the price?">
+        Is it worth the price?
+      </button>
+
+      <button data-question="Find something cheaper">
+        Find something cheaper
+      </button>
+
+    </div>
+
+    <div
+      class="ai-response"
+      id="aiResponse"
+    ></div>
+
+  </aside>
+
+
+  <!-- CART PANEL -->
+  <aside
+    class="cart-panel"
+    id="cartPanel"
+  >
+
+    <button
+      class="close-cart"
+      id="closeCart"
+      aria-label="Close bag"
+    >
+      ×
+    </button>
+
+    <div class="cart-heading">
+      <span>YOUR BAG</span>
+      <strong id="cartItemsCount">0 ITEMS</strong>
+    </div>
+
+    <div
+      class="cart-items"
+      id="cartItems"
+    >
+      <div class="empty-cart">
+        Your bag is empty.
+      </div>
+    </div>
+
+    <div class="cart-bottom">
+
+      <div class="cart-total">
+
+        <span>Total</span>
+
+        <strong id="cartTotal">
+          KES 0
+        </strong>
+
+      </div>
+
+      <button
+        class="checkout-button"
+        id="checkoutButton"
+      >
+        DEMO CHECKOUT →
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- OVERLAY -->
+  <div
+    class="overlay"
+    id="overlay"
+  ></div>
+
+
+  <!-- TOAST -->
+  <div
+    class="toast"
+    id="toast"
+  >
+    Added to your bag
+  </div>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
